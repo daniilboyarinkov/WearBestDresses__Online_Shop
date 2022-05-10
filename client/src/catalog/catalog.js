@@ -37,4 +37,6 @@ const catalog = {
     'everyday-dresses': EverydayDresses,
 }
 
+console.log(catalog)
+
 export default catalog
