@@ -10,15 +10,15 @@ import NotFoundPage from '../pages/NotFoundPage/NotFoundPage'
 const AppRoutes = () => {
     return (
         <Routes>
-            <Route path='/WearBestDresses__Online_Shop' element={<MainPage />} />
-            <Route path='/WearBestDresses__Online_Shop/catalog' element={<Catalog />} />
-            <Route path='/WearBestDresses__Online_Shop/catalog/:category' element={<Catalog />} />
-            <Route path='/WearBestDresses__Online_Shop/catalog/:category/page/:page' element={<Catalog />} />
-            <Route path='/WearBestDresses__Online_Shop/catalog/page/:page' element={<Catalog />} />
-            <Route path='/WearBestDresses__Online_Shop/cart' element={<Cart />} />
-            <Route path='/WearBestDresses__Online_Shop/favourite' element={<Favourite />} />
-            <Route path='/WearBestDresses__Online_Shop/catalog/product/:id' element={<ProductPage />} />
-            <Route path='/WearBestDresses__Online_Shop/catalog/:category/product/:id' element={<ProductPage />} />
+            <Route path='' element={<MainPage />} />
+            <Route path='catalog' element={<Catalog />} />
+            <Route path='catalog/:category' element={<Catalog />} />
+            <Route path='catalog/:category/page/:page' element={<Catalog />} />
+            <Route path='catalog/page/:page' element={<Catalog />} />
+            <Route path='cart' element={<Cart />} />
+            <Route path='favourite' element={<Favourite />} />
+            <Route path='catalog/product/:id' element={<ProductPage />} />
+            <Route path='catalog/:category/product/:id' element={<ProductPage />} />
             <Route path='*' element={<NotFoundPage />} />
         </Routes>
     )
