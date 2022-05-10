@@ -27,7 +27,7 @@ const Productpage = () => {
     useEffect(() => {
         const doSth = async () => {
             const catalog = require('../../catalog/catalog')
-            const pr = catalog.all.find((p) => +p.id === +id)
+            const pr = catalog.default.all.find((p) => +p.id === +id)
 
             setProduct(pr)
             setActiveImage(pr.images[0])

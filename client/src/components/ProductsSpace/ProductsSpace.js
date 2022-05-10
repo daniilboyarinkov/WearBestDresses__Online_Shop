@@ -31,8 +31,8 @@ const ProductsSpace = ({ productsPerPage }) => {
 
     useEffect(() => {
         const setNewProducts = async () => {
-            const catalog = require('../../catalog/catalog')
-            const prs = catalog.default[`${category}`]
+            let catalog = require('../../catalog/catalog')
+            let prs = catalog.default[`${category}`]
             if (isFilteredByPriceUp)
                 prs.sort((a, b) => +a.price.replace(' ', '') - +b.price.replace(' ', ''))
             else if (isFilteredByPriceDown)
@@ -44,7 +44,7 @@ const ProductsSpace = ({ productsPerPage }) => {
                         pr.brand.toLowerCase().includes(filterQuery.toLowerCase())
                 )
             )
-            await setProductsOnPage(
+            setProductsOnPage(
                 products.slice(+page * productsPerPage - productsPerPage, +page * productsPerPage)
             )
         }
