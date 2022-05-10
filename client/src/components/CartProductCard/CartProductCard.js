@@ -10,7 +10,7 @@ const CartproductCard = ({ product, index, deleteProducts }) => (
             className={styles.product__cross}
             onClick={() => deleteProducts(product)}
             width={42}
-            src='/svg/cross.svg'
+            src='/WearBestDresses__Online_Shop/svg/cross.svg'
             alt=''
         />
         <Link to={`/WearBestDresses__Online_Shop/catalog/product/${product.id}`}>

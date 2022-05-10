@@ -15,7 +15,7 @@ export const PriceFilter = ({
                 isFilteredByPriceUp ? `${styles.arrow} ${styles.arrow__active}` : styles.arrow
             }
             width={20}
-            src='/svg/arrow_up.svg'
+            src='/WearBestDresses__Online_Shop/svg/arrow_up.svg'
             alt=''
         />
         <img
@@ -25,7 +25,7 @@ export const PriceFilter = ({
                 isFilteredByPriceDown ? `${styles.arrow} ${styles.arrow__active}` : styles.arrow
             }
             width={20}
-            src='/svg/arrow_down.svg'
+            src='/WearBestDresses__Online_Shop/svg/arrow_down.svg'
             alt=''
         />
     </div>

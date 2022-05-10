@@ -103,7 +103,7 @@ const ProductsSpace = ({ productsPerPage }) => {
                     <Empty
                         title={'Пусто...'}
                         description={'Товаров нет... Приходите завтра'}
-                        img={'/icons/logo-large.svg'}
+                        img={'/WearBestDresses__Online_Shop/icons/logo-large.svg'}
                     />
                 )}
             </div>

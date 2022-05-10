@@ -8,7 +8,7 @@ const Pagination = ({ first, current, last }) => {
         <div className={styles.pagination__container}>
             {+current > 1 && (
                 <Link to={`/WearBestDresses__Online_Shop/catalog/${category}/page/${+current - 1}`}>
-                    <img className={styles.previous} width={32} src='/svg/next.svg' alt='' />
+                    <img className={styles.previous} width={32} src='/WearBestDresses__Online_Shop/svg/next.svg' alt='' />
                 </Link>
             )}
 
@@ -22,7 +22,7 @@ const Pagination = ({ first, current, last }) => {
 
             {+current < +last && (
                 <Link to={`/WearBestDresses__Online_Shop/catalog/${category}/page/${+current + 1}`}>
-                    <img className={styles.next} width={32} src='/svg/next.svg' alt='' />
+                    <img className={styles.next} width={32} src='/WearBestDresses__Online_Shop/svg/next.svg' alt='' />
                 </Link>
             )}
         </div>

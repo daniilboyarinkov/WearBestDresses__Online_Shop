@@ -8,10 +8,10 @@ export const GiftCard = () => {
     return (
         <div className={styles.gift__card}>
             <div className={styles.front__gift__card}>
-                <img style={{ objectFit: 'cover' }} src='/img/gift_card_front.png' alt='' />
+                <img style={{ objectFit: 'cover' }} src='/WearBestDresses__Online_Shop/img/gift_card_front.png' alt='' />
             </div>
             <div className={styles.back__gift__card}>
-                <img style={{ objectFit: 'cover' }} src='/img/gift_card_back.png' alt='' />
+                <img style={{ objectFit: 'cover' }} src='/WearBestDresses__Online_Shop/img/gift_card_back.png' alt='' />
                 <CopyToClipboard text='GIFT1000' onCopy={() => setCodeCopied(true)}>
                     <div className={styles.gift__card__code}>GIFT1000</div>
                 </CopyToClipboard>

@@ -19,7 +19,7 @@ export const Search = ({ filterProducts }) => {
                 onClick={() => filterProducts(value)}
                 draggable={false}
                 className={styles.search__icon}
-                src='/svg/search.svg'
+                src='/WearBestDresses__Online_Shop/svg/search.svg'
                 alt=''
             />
         </div>

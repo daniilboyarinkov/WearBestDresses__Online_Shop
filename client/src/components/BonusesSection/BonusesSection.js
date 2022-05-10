@@ -13,7 +13,7 @@ const BonusesSection = ({ children, title }) => {
             <div className={styles.coupons} onClick={changeSectionOpen}>
                 {title}
                 <img
-                    src='/svg/next.svg'
+                    src='/WearBestDresses__Online_Shop/svg/next.svg'
                     alt=''
                     width={24}
                     className={

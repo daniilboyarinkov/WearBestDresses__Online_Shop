@@ -29,7 +29,7 @@ export default function ProductCard(props) {
                     onClick={changeAddedToFavourite}
                     className={styles.favourite}
                     width={32}
-                    src='/svg/like_done.svg'
+                    src='/WearBestDresses__Online_Shop/svg/like_done.svg'
                     alt=''
                 />
             ) : (
@@ -37,7 +37,7 @@ export default function ProductCard(props) {
                     onClick={changeAddedToFavourite}
                     className={styles.favourite}
                     width={32}
-                    src='/svg/like_undone.svg'
+                    src='/WearBestDresses__Online_Shop/svg/like_undone.svg'
                     alt=''
                 />
             )}
@@ -47,7 +47,7 @@ export default function ProductCard(props) {
                     onClick={changeAddedToCart}
                     className={styles.add__tocart}
                     width={32}
-                    src='/svg/check.svg'
+                    src='/WearBestDresses__Online_Shop/svg/check.svg'
                     alt=''
                 />
             ) : (
@@ -55,7 +55,7 @@ export default function ProductCard(props) {
                     onClick={changeAddedToCart}
                     className={styles.add__tocart}
                     width={32}
-                    src='/svg/add.svg'
+                    src='/WearBestDresses__Online_Shop/svg/add.svg'
                     alt=''
                 />
             )}

@@ -8,7 +8,7 @@ export const CouponCard = () => {
     return (
         <div className={styles.coupon__card}>
             <div className={styles.coupon__front}>
-                <img width={350} src='/img/coupon.png' alt='' />
+                <img width={350} src='/WearBestDresses__Online_Shop/img/coupon.png' alt='' />
             </div>
             <div className={styles.coupon__back}>
                 <h3>You are lucky to have a coupon card.</h3>

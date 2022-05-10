@@ -14,7 +14,7 @@ export default function Header() {
                                 className={styles.logo__pic}
                                 width='150px'
                                 height='70px'
-                                src='/icons/logo-large.svg'
+                                src='/WearBestDresses__Online_Shop/icons/logo-large.svg'
                                 alt=''
                             />
                         ) : (
@@ -22,7 +22,7 @@ export default function Header() {
                                 className={styles.logo__pic__small}
                                 width='50px'
                                 height='70px'
-                                src='/icons/logo.svg'
+                                src='/WearBestDresses__Online_Shop/icons/logo.svg'
                                 alt=''
                             />
                         )}
@@ -40,13 +40,13 @@ export default function Header() {
                 {pathname === '/WearBestDresses__Online_Shop/favourite' ? (
                     <div className={`${styles.header__item} ${styles.header__button}`}>
                         <Link to={`/WearBestDresses__Online_Shop/favourite`}>
-                            <img width={42} src='/svg/like_done_gray.svg' alt='' />
+                            <img width={42} src='/WearBestDresses__Online_Shop/svg/like_done_gray.svg' alt='' />
                         </Link>
                     </div>
                 ) : (
                     <div className={`${styles.header__item} ${styles.header__button}`}>
                         <Link to={`/WearBestDresses__Online_Shop/favourite`}>
-                            <img width={42} src='/svg/like_grey.svg' alt='' />
+                            <img width={42} src='/WearBestDresses__Online_Shop/svg/like_grey.svg' alt='' />
                         </Link>
                     </div>
                 )}
@@ -58,7 +58,7 @@ export default function Header() {
                                 className='cart'
                                 width='42px'
                                 height='42px'
-                                src='/svg/cart_white.svg'
+                                src='/WearBestDresses__Online_Shop/svg/cart_white.svg'
                                 alt=''
                             />
                         </Link>
@@ -70,7 +70,7 @@ export default function Header() {
                                 className='cart'
                                 width='42px'
                                 height='42px'
-                                src='/svg/cart.svg'
+                                src='/WearBestDresses__Online_Shop/svg/cart.svg'
                                 alt=''
                             />
                         </Link>
