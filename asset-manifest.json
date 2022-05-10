@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/WearBestDresses__Online_Shop/static/css/main.9abfa66f.css",
-    "main.js": "/WearBestDresses__Online_Shop/static/js/main.b76a2af3.js",
+    "main.js": "/WearBestDresses__Online_Shop/static/js/main.b5e4170c.js",
     "static/media/PlayfairDisplay-BoldItalic.ttf": "/WearBestDresses__Online_Shop/static/media/PlayfairDisplay-BoldItalic.03641d2f8864de99a5d4.ttf",
     "index.html": "/WearBestDresses__Online_Shop/index.html",
     "main.9abfa66f.css.map": "/WearBestDresses__Online_Shop/static/css/main.9abfa66f.css.map",
-    "main.b76a2af3.js.map": "/WearBestDresses__Online_Shop/static/js/main.b76a2af3.js.map"
+    "main.b5e4170c.js.map": "/WearBestDresses__Online_Shop/static/js/main.b5e4170c.js.map"
   },
   "entrypoints": [
     "static/css/main.9abfa66f.css",
-    "static/js/main.b76a2af3.js"
+    "static/js/main.b5e4170c.js"
   ]
 }
