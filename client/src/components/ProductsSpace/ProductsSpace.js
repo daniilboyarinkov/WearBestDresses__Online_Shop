@@ -31,27 +31,22 @@ const ProductsSpace = ({ productsPerPage }) => {
 
     useEffect(() => {
         const setNewProducts = async () => {
-            await fetch(`http://localhost:5000/catalog/${category}`)
-                .then((res) => res.json())
-                .then(async (prs) => {
-                    if (isFilteredByPriceUp)
-                        prs.sort((a, b) => +a.price.replace(' ', '') - +b.price.replace(' ', ''))
-                    else if (isFilteredByPriceDown)
-                        prs.sort((a, b) => +b.price.replace(' ', '') - +a.price.replace(' ', ''))
-                    await setProducts(
-                        prs.filter(
-                            (pr) =>
-                                pr.name.toLowerCase().includes(filterQuery.toLowerCase()) ||
-                                pr.brand.toLowerCase().includes(filterQuery.toLowerCase())
-                        )
-                    )
-                    await setProductsOnPage(
-                        products.slice(
-                            +page * productsPerPage - productsPerPage,
-                            +page * productsPerPage
-                        )
-                    )
-                })
+            const catalog = require('../../catalog/catalog')
+            const prs = catalog[`${category}`]
+            if (isFilteredByPriceUp)
+                prs.sort((a, b) => +a.price.replace(' ', '') - +b.price.replace(' ', ''))
+            else if (isFilteredByPriceDown)
+                prs.sort((a, b) => +b.price.replace(' ', '') - +a.price.replace(' ', ''))
+            await setProducts(
+                prs.filter(
+                    (pr) =>
+                        pr.name.toLowerCase().includes(filterQuery.toLowerCase()) ||
+                        pr.brand.toLowerCase().includes(filterQuery.toLowerCase())
+                )
+            )
+            await setProductsOnPage(
+                products.slice(+page * productsPerPage - productsPerPage, +page * productsPerPage)
+            )
         }
         setNewProducts()
     }, [

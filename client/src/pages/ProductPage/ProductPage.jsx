@@ -25,15 +25,17 @@ const Productpage = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/catalog/product/${id}`)
-            .then((res) => res.json())
-            .then((pr) => {
-                setProduct(pr)
-                setActiveImage(pr.images[0])
-                setAddedToCart(checkProductInSessionStorage('cartObjects', pr))
-                setAddedToFavourite(checkProductInSessionStorage('favouriteObjects', pr))
-                setMoreInfoText(pr.description)
-            })
+        const doSth = async () => {
+            const catalog = require('../../catalog/catalog')
+            const pr = catalog.all.find((p) => +p.id === +id)
+
+            setProduct(pr)
+            setActiveImage(pr.images[0])
+            setAddedToCart(checkProductInSessionStorage('cartObjects', pr))
+            setAddedToFavourite(checkProductInSessionStorage('favouriteObjects', pr))
+            setMoreInfoText(pr.description)
+        }
+        doSth()
     }, [id])
 
     return (

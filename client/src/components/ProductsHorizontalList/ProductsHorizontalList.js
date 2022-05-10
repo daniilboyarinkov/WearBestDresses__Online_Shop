@@ -2,7 +2,7 @@ import styles from './ProductsHorizontalList.module.css'
 
 import { CartproductCard } from '../CartProductCard/CartProductCard'
 
-const ProductsHorizontalList = ({ products, handleSetProducts, deleteProducts }) => (
+const ProductsHorizontalList = ({ products, deleteProducts }) => (
     <div className={styles.products}>
         {products.map((product, index) => (
             <CartproductCard

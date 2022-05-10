@@ -6,8 +6,7 @@ import styles from './MainPage.module.css'
 const MainPage = () => {
     return (
         <div className={styles.content__container}>
-            <h1>Wear Best Dresses</h1>
-
+            <h1>Wear Best Dresses</h1>            
             <p>
                 {' — Это интернет магазин, pet проект '}
                 <a href='https://github.com/daniilboyarinkov'> BDW </a>.
