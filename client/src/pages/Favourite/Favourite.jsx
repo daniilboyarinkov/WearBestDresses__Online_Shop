@@ -40,7 +40,7 @@ const Favourite = () => {
                 <Empty
                     title={'Ничего нет...'}
                     description={'Добавьте что-нибудь в избранное, чтобы это отобразилось здесь...'}
-                    img={'/img/dust.png'}
+                    img={'/WearBestDresses__Online_Shop/img/dust.png'}
                 />
             )}
         </>

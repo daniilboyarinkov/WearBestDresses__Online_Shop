@@ -82,7 +82,7 @@ const Cart = () => {
             ) : (
                 <Empty
                     title={'Корзина пуста...'}
-                    img={'/img/empty_cart.png'}
+                    img={'/WearBestDresses__Online_Shop/img/empty_cart.png'}
                     description={'Добавьте что-нибудь в корзину, чтобы это появилось здесь...'}
                 />
             )}

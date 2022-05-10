@@ -37,4 +37,4 @@ const catalog = {
     'everyday-dresses': EverydayDresses,
 }
 
-module.exports = catalog
+export default catalog
