@@ -8,7 +8,7 @@ export default function Header() {
         <header>
             <div className={styles.header__section}>
                 <div className='header__item header__logo'>
-                    <Link to={`/`}>
+                    <Link to={`/WearBestDresses__Online_Shop`}>
                         {window.screen.availWidth > 720 ? (
                             <img
                                 className={styles.logo__pic}
@@ -31,19 +31,21 @@ export default function Header() {
             </div>
             <div className={styles.header__section}>
                 <div className={`${styles.header__item} ${styles.header__button}`}>
-                    <Link className={styles.headerLink} to={`/catalog`}>
+                    <Link
+                        className={styles.headerLink}
+                        to={`/WearBestDresses__Online_Shop/catalog`}>
                         Каталог
                     </Link>
                 </div>
-                {pathname === '/favourite' ? (
+                {pathname === '/WearBestDresses__Online_Shop/favourite' ? (
                     <div className={`${styles.header__item} ${styles.header__button}`}>
-                        <Link to={`/favourite`}>
+                        <Link to={`/WearBestDresses__Online_Shop/favourite`}>
                             <img width={42} src='/svg/like_done_gray.svg' alt='' />
                         </Link>
                     </div>
                 ) : (
                     <div className={`${styles.header__item} ${styles.header__button}`}>
-                        <Link to={`/favourite`}>
+                        <Link to={`/WearBestDresses__Online_Shop/favourite`}>
                             <img width={42} src='/svg/like_grey.svg' alt='' />
                         </Link>
                     </div>
@@ -51,7 +53,7 @@ export default function Header() {
 
                 {pathname === '/cart' ? (
                     <div className={`${styles.header__item} ${styles.header__button}`}>
-                        <Link to={`/cart`}>
+                        <Link to={`/WearBestDresses__Online_Shop/cart`}>
                             <img
                                 className='cart'
                                 width='42px'
@@ -63,7 +65,7 @@ export default function Header() {
                     </div>
                 ) : (
                     <div className={`${styles.header__item} ${styles.header__button}`}>
-                        <Link to={`/cart`}>
+                        <Link to={`/WearBestDresses__Online_Shop/cart`}>
                             <img
                                 className='cart'
                                 width='42px'

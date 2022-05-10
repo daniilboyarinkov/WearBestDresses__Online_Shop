@@ -27,7 +27,7 @@ export default function LeftMenu() {
                     const category = defaultDressTypesRoutes[`${el}`]
                     return (
                         <Link
-                            to={`/catalog/${category}`}
+                            to={`/WearBestDresses__Online_Shop/catalog/${category}`}
                             key={`${category}`}
                             className={styles.dress__type}>{`${el}`}</Link>
                     )

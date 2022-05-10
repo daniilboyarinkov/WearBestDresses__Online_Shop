@@ -13,7 +13,7 @@ const CartproductCard = ({ product, index, deleteProducts }) => (
             src='/svg/cross.svg'
             alt=''
         />
-        <Link to={`/catalog/product/${product.id}`}>
+        <Link to={`/WearBestDresses__Online_Shop/catalog/product/${product.id}`}>
             <img
                 className={styles.product__img}
                 width={150}

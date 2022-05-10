@@ -60,7 +60,7 @@ export default function ProductCard(props) {
                 />
             )}
 
-            <Link to={`/catalog/product/${id}`}>
+            <Link to={`/WearBestDresses__Online_Shop/catalog/product/${id}`}>
                 <img className={styles.product__img} draggable='false' src={`${img}`} alt='' />
             </Link>
             <div className='info'>
