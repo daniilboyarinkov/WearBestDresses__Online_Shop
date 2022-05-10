@@ -1,0 +1,85 @@
+.content__container {
+    width: 60vw;
+    border-radius: 5rem;
+    border: 0.02rem solid #333;
+    box-shadow: 0 0 1rem #000;
+    margin: 1rem auto;
+    color: #333;
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: #fff;
+    padding-top: 1rem;
+}
+
+.content__container p {
+    font-size: large;
+}
+
+.content__container .div_ul {
+    font-size: large;
+}
+
+.content__container a {
+    font-size: larger;
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+.content__container ul {
+    text-align: start;
+    list-style-type: lower-greek;
+}
+
+.coupon__card {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.coupon__card__container {
+    margin: 5rem auto;
+    width: fit-content;
+    border: 0.1rem dashed #000;
+    border-radius: 2rem;
+    padding: 0 2rem;
+}
+
+.gift__card {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 5rem;
+    border: 0.1rem dashed #000;
+    border-radius: 2rem;
+    padding: 0 4rem;
+}
+
+.technologies {
+    background-color: #efefef;
+    box-shadow: 0 0 0.1rem #000;
+    width: fit-content;
+    margin: 0 auto;
+    border: 0.4rem double #666;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.additional__info {
+    text-align: left;
+    width: fit-content;
+    margin: 2rem auto;
+    background-color: #eee;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    border: 0.1rem solid #000;
+    box-shadow: 0 0 .6rem #000;
+}
+
+.additional__info span {
+    font-weight: bold;
+    font-size: larger;
+    text-decoration: underline;
+}

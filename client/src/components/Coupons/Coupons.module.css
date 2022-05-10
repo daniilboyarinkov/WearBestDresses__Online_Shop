@@ -1,0 +1,59 @@
+.bonuses__panel {
+    text-align: center;
+    margin-left: 3rem;
+}
+
+.bonuses__form {
+    color: #3e3e3e;
+}
+
+.label__section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.label__section > input[type='text'] {
+    font-size: large;
+    width: 40%;
+    margin: 1rem auto;
+    padding: 1rem;
+    outline: none;
+    border: 0.01rem solid #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+}
+
+.code__submit {
+    display: flex;
+    flex-direction: column;
+}
+
+.code__submit > input[type='submit'] {
+    cursor: pointer;
+    width: fit-content;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    color: #ccc;
+    font-weight: bold;
+    text-shadow: 0 0 0.01rem #3e3e3e;
+    outline: none;
+    border: none;
+    border: 0.01rem solid #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.4);
+}
+
+.code__submit > input[type='submit']:hover {
+    scale: 1.1;
+}
+
+@media (max-width: 720px) {
+    .bonuses__panel {
+        width: 100%;
+        margin-left: 0;
+    }
+}

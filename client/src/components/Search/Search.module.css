@@ -1,0 +1,31 @@
+.search {
+    padding: .4rem;
+    width: fit-content;
+    border: 0.01rem solid #e3e3e3;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search__icon {
+    cursor: pointer;
+}
+
+.search__input {
+    outline: none;
+    border: none;
+    color: #3e3e3e;
+    font-weight: bold;
+}
+
+@media (max-width: 720px) {
+    .search {
+        margin: 0;
+        margin-right: 0;
+        scale: .8;
+        padding: 1rem 0;
+    }
+}

@@ -1,0 +1,17 @@
+.cart__container {
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    grid-template-rows: 65vh;
+}
+
+@media (max-width: 720px) {
+    .cart__container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .right__side {
+        margin: 2rem 0;
+        align-self: center;
+    }
+}

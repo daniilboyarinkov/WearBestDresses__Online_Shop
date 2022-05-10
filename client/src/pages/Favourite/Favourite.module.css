@@ -1,0 +1,38 @@
+.favourite__page {
+    text-align: center;
+    color: #3e3e3e;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.favourited__products {
+    height: 75vh;
+    overflow-y: scroll;
+}
+
+.favourite__img__block {
+    margin: 0 auto;
+}
+.favourite__img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 720px) {
+    .container {
+        max-width: 100%;
+        margin: 0;
+        grid-template-columns: 1fr;
+    }
+    .favourited__products {
+        max-width: 100%;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .favourite__img__block {
+        width: 20%;
+    }
+}

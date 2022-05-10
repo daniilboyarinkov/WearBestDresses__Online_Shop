@@ -1,0 +1,35 @@
+.container {
+    color: #3e3e3e;
+    font-weight: bold;
+    display: flex;
+    width: fit-content;
+    margin: 1rem 0;
+    margin-left: 2rem;
+    border: 0.01rem solid #e3e3e3;
+    border-radius: 1rem;
+    padding: 0.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    cursor: pointer;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+.arrow:hover {
+    scale: 1.1;
+}
+
+.arrow__active {
+    box-shadow: 0 0 0.1rem #3e3e3e;
+    border-radius: 1rem;
+}
+
+@media (max-width: 720px) {
+    .container {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+    }
+}

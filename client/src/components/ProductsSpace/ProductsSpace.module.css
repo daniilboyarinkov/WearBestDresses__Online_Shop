@@ -1,0 +1,22 @@
+.filters__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left__menu__Link {
+    text-decoration: none;
+    color: #3e3e3e;
+}
+
+.products__space {
+    padding: 1rem;
+    border-radius: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    transition: 2s;
+
+    align-items: center;
+    justify-items: center;
+}

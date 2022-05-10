@@ -1,0 +1,50 @@
+.pagination__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    user-select: none;
+    box-shadow: 0 0 0.2rem #3e3e3e;
+    background-color: #fff;
+    border-radius: 1rem;
+    width: 15rem;
+    height: 3rem;
+    margin: 1rem auto;
+}
+
+.pagination__container:hover {
+    box-shadow: 0 0 0.3rem #3e3e3e;
+}
+
+.previous {
+    transform: rotate(180deg);
+}
+
+.first,
+.last,
+.current,
+.next,
+.previous {
+    cursor: pointer;
+}
+
+.first,
+.last,
+.current {
+    color: #3e3e3e;
+    border-radius: 1rem;
+    padding: 0.05rem 0.4rem;
+    font-size: 28px;
+    
+}
+
+.first:hover,
+.last:hover,
+.current:hover {
+    box-shadow: 0 0 0.2rem #3e3e3e;
+    scale: 1.02;
+}
+
+.next:hover,
+.previous:hover {
+    scale: 1.1;
+}

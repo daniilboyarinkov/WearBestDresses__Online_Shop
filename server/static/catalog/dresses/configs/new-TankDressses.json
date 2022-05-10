@@ -1,0 +1,141 @@
+[
+    {
+        "id": 108,
+        "name": "\u041f\u043b\u0430\u0442\u044c\u0435",
+        "brand": "\u0410\u043f\u0440\u0435\u043b\u044c",
+        "price": "1 690",
+        "vendor code": "MP002XW0D5CR",
+        "description": "\u0421\u043e\u0441\u0442\u0430\u0432 \u0425\u043b\u043e\u043f\u043e\u043a - 95%, \u041b\u0430\u0439\u043a\u0440\u0430 - 5%",
+        "images": [
+            "http://localhost:5000/catalog/dresses/images/TankDressses/108-0.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/108-1.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/108-2.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/108-3.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/108-4.png"
+        ]
+    },
+    {
+        "id": 109,
+        "name": "\u041f\u043b\u0430\u0442\u044c\u0435",
+        "brand": "\u0410\u043f\u0440\u0435\u043b\u044c",
+        "price": "1 690",
+        "vendor code": "MP002XW0D5CS",
+        "description": "\u0421\u043e\u0441\u0442\u0430\u0432 \u0425\u043b\u043e\u043f\u043e\u043a - 95%, \u041b\u0430\u0439\u043a\u0440\u0430 - 5%",
+        "images": [
+            "http://localhost:5000/catalog/dresses/images/TankDressses/109-0.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/109-1.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/109-2.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/109-3.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/109-4.png"
+        ]
+    },
+    {
+        "id": 110,
+        "name": "\u041f\u043b\u0430\u0442\u044c\u0435",
+        "brand": "Juicy Couture",
+        "price": "10 500",
+        "vendor code": "RTLABJ194701",
+        "description": "\u041f\u043e\u043b\u0438\u044d\u0441\u0442\u0435\u0440 - 61%, \u0425\u043b\u043e\u043f\u043e\u043a - 34%, \u042d\u043b\u0430\u0441\u0442\u0430\u043d - 5%",
+        "images": [
+            "http://localhost:5000/catalog/dresses/images/TankDressses/110-0.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/110-1.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/110-2.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/110-3.png"
+        ]
+    },
+    {
+        "id": 111,
+        "name": "\u041f\u043b\u0430\u0442\u044c\u0435",
+        "brand": "Mark Formelle",
+        "price": "3 590",
+        "vendor code": "MP002XW0D61L",
+        "description": "\u0421\u043e\u0441\u0442\u0430\u0432 \u0425\u043b\u043e\u043f\u043e\u043a - 92%, \u042d\u043b\u0430\u0441\u0442\u0430\u043d - 8% ",
+        "images": [
+            "http://localhost:5000/catalog/dresses/images/TankDressses/111-0.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/111-1.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/111-2.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/111-3.png"
+        ]
+    },
+    {
+        "id": 112,
+        "name": "\u041f\u043b\u0430\u0442\u044c\u0435",
+        "brand": "Concept Club",
+        "price": "1 590",
+        "vendor code": "MP002XW0865E",
+        "description": "\u0421\u043e\u0441\u0442\u0430\u0432 \u041f\u043e\u043b\u0438\u044d\u0441\u0442\u0435\u0440 - 75%, \u0412\u0438\u0441\u043a\u043e\u0437\u0430 - 20%, \u042d\u043b\u0430\u0441\u0442\u0430\u043d - 5% ",
+        "images": [
+            "http://localhost:5000/catalog/dresses/images/TankDressses/112-0.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/112-1.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/112-2.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/112-3.png"
+        ]
+    },
+    {
+        "id": 113,
+        "name": "\u0410\u0442\u043b\u0430\u0441\u043d\u044b\u0439 \u0442\u043e\u043f \u0441 \u0446\u0435\u043f\u043e\u0447\u043d\u044b\u043c\u0438 \u0431\u0440\u0435\u0442\u0435\u043b\u044f\u043c\u0438",
+        "brand": "",
+        "price": "3 999",
+        "venor code": "TOP1011",
+        "description": "\u042d\u043b\u0435\u0433\u0430\u043d\u0442\u043d\u044b\u0439 \u0442\u043e\u043f \u043f\u0440\u044f\u043c\u043e\u0433\u043e \u043a\u0440\u043e\u044f \u0441 \u0433\u043b\u0443\u0431\u043e\u043a\u0438\u043c V-\u043e\u0431\u0440\u0430\u0437\u043d\u044b\u043c \u0432\u044b\u0440\u0435\u0437\u043e\u043c \u0438 \u0430\u0441\u0438\u043c\u043c\u0435\u0442\u0440\u0438\u0447\u043d\u044b\u043c\u0438 \u0446\u0435\u043f\u043e\u0447\u043d\u044b\u043c\u0438 \u0431\u0440\u0435\u0442\u0435\u043b\u044f\u043c\u0438, \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u043d\u044b\u0439 \u0438\u0437 \u0433\u043b\u0430\u0434\u043a\u043e\u0433\u043e \u0441\u0442\u0440\u0443\u044f\u0449\u0435\u0433\u043e\u0441\u044f \u0430\u0442\u043b\u0430\u0441\u0430.",
+        "images": [
+            "http://localhost:5000/catalog/dresses/images/TankDressses/113-0.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/113-1.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/113-2.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/113-3.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/113-4.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/113-5.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/113-6.png"
+        ]
+    },
+    {
+        "id": 114,
+        "name": "\u0410\u0442\u043b\u0430\u0441\u043d\u044b\u0439 \u0442\u043e\u043f \u0441 \u0446\u0435\u043f\u043e\u0447\u043d\u044b\u043c \u0434\u0435\u043a\u043e\u0440\u043e\u043c",
+        "brand": "",
+        "price": "3 799",
+        "venor code": "TOP1005",
+        "description": "\u042d\u043b\u0435\u0433\u0430\u043d\u0442\u043d\u044b\u0439 \u0430\u0442\u043b\u0430\u0441\u043d\u044b\u0439 \u0442\u043e\u043f \u043f\u0440\u044f\u043c\u043e\u0433\u043e \u043a\u0440\u043e\u044f \u043d\u0430 \u0442\u043e\u043d\u043a\u0438\u0445 \u0431\u0440\u0435\u0442\u0435\u043b\u044f\u0445, \u0434\u043e\u043f\u043e\u043b\u043d\u0435\u043d\u043d\u044b\u0439 \u0438\u0437\u044b\u0441\u043a\u0430\u043d\u043d\u044b\u043c \u0434\u0440\u0430\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u043c \u0432\u044b\u0440\u0435\u0437\u043e\u043c \u0438 \u0441\u044a\u0435\u043c\u043d\u044b\u043c \u0434\u0435\u043a\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u043c \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u043e\u043c \u043d\u0430 \u0433\u0440\u0443\u0434\u0438.",
+        "images": [
+            "http://localhost:5000/catalog/dresses/images/TankDressses/114-0.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/114-1.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/114-2.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/114-3.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/114-4.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/114-5.png"
+        ]
+    },
+    {
+        "id": 115,
+        "name": "\u0410\u0442\u043b\u0430\u0441\u043d\u044b\u0439 \u0442\u043e\u043f \u0441 \u0446\u0435\u043f\u043e\u0447\u043d\u044b\u043c \u0434\u0435\u043a\u043e\u0440\u043e\u043c",
+        "brand": "",
+        "price": "3 799",
+        "venor code": "TOP1009",
+        "description": "\u042d\u043b\u0435\u0433\u0430\u043d\u0442\u043d\u044b\u0439 \u0430\u0442\u043b\u0430\u0441\u043d\u044b\u0439 \u0442\u043e\u043f \u043f\u0440\u044f\u043c\u043e\u0433\u043e \u043a\u0440\u043e\u044f \u043d\u0430 \u0442\u043e\u043d\u043a\u0438\u0445 \u0431\u0440\u0435\u0442\u0435\u043b\u044f\u0445, \u0434\u043e\u043f\u043e\u043b\u043d\u0435\u043d\u043d\u044b\u0439 \u0438\u0437\u044b\u0441\u043a\u0430\u043d\u043d\u044b\u043c \u0434\u0440\u0430\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u043c \u0432\u044b\u0440\u0435\u0437\u043e\u043c \u0438 \u0441\u044a\u0435\u043c\u043d\u044b\u043c \u0434\u0435\u043a\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u043c \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u043e\u043c \u043d\u0430 \u0433\u0440\u0443\u0434\u0438.",
+        "images": [
+            "http://localhost:5000/catalog/dresses/images/TankDressses/115-0.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/115-1.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/115-2.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/115-3.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/115-4.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/115-5.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/115-6.png"
+        ]
+    },
+    {
+        "id": 116,
+        "name": "\u0410\u0442\u043b\u0430\u0441\u043d\u044b\u0439 \u0442\u043e\u043f \u0441 \u0446\u0435\u043f\u043e\u0447\u043d\u044b\u043c \u0434\u0435\u043a\u043e\u0440\u043e\u043c",
+        "brand": "",
+        "price": "3 799",
+        "venor code": "TOP1006",
+        "description": "\u042d\u043b\u0435\u0433\u0430\u043d\u0442\u043d\u044b\u0439 \u0430\u0442\u043b\u0430\u0441\u043d\u044b\u0439 \u0442\u043e\u043f \u043f\u0440\u044f\u043c\u043e\u0433\u043e \u043a\u0440\u043e\u044f \u043d\u0430 \u0442\u043e\u043d\u043a\u0438\u0445 \u0431\u0440\u0435\u0442\u0435\u043b\u044f\u0445, \u0434\u043e\u043f\u043e\u043b\u043d\u0435\u043d\u043d\u044b\u0439 \u0438\u0437\u044b\u0441\u043a\u0430\u043d\u043d\u044b\u043c \u0434\u0440\u0430\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u043c \u0432\u044b\u0440\u0435\u0437\u043e\u043c \u0438 \u0441\u044a\u0435\u043c\u043d\u044b\u043c \u0434\u0435\u043a\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u043c \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u043e\u043c \u043d\u0430 \u0433\u0440\u0443\u0434\u0438.",
+        "images": [
+            "http://localhost:5000/catalog/dresses/images/TankDressses/116-0.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/116-1.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/116-2.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/116-3.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/116-4.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/116-5.png",
+            "http://localhost:5000/catalog/dresses/images/TankDressses/116-6.png"
+        ]
+    }
+]

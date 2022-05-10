@@ -1,0 +1,32 @@
+.headerLink {
+    color: #e3e3e3;
+    text-decoration: none;
+}
+
+header {
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: #3e3e3e;
+    padding: 0 1rem;
+    box-shadow: 0.02rem 0.02rem 0.1rem 0.1rem #5a5a5a;
+}
+
+.header__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.header__item {
+    padding: 0 0.5rem;
+}
+
+.header__button {
+    cursor: pointer;
+}
+
+.logo__pic__small {
+    opacity: 0.8;
+}

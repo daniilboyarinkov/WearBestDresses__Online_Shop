@@ -1,0 +1,30 @@
+@font-face {
+    font-family: PlayFair;
+    src: url(../public/fonts/static/PlayfairDisplay-BoldItalic.ttf);
+}
+
+:root {
+    --main-color: #c4c4c4;
+    --lighter-color: #efefef;
+    --background-color: #ffffff;
+}
+
+* {
+    font-family: PlayFairItalic;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: PlayFairItalic, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background-color: rgb(39, 39, 39);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

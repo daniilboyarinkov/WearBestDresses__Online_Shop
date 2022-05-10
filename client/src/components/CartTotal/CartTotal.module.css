@@ -1,0 +1,71 @@
+.total {
+    color: #3e3e3e;
+    margin-left: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.discount__block {
+    text-align: center;
+    display: inline-grid;
+    grid-template-columns: auto 1fr auto;
+    font-weight: 100;
+}
+
+.discount__block > span {
+    text-align: right;
+}
+
+.dotted__line__total {
+    border-bottom: 2px dotted black;
+    width: 14rem;
+}
+
+.dotted__line__discount {
+    border-bottom: 2px dotted black;
+    width: 20rem;
+}
+
+.totalPrice__block {
+    margin-top: 0;
+    display: inline-grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.buyBtn {
+    color: #666;
+    border: 0.01rem solid #e3e3e3;
+    box-shadow: 0 0 1rem #3e3e3e;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: rgba(231, 255, 230, 0.8);
+    cursor: pointer;
+    width: 20rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    height: 5rem;
+    border: none;
+    border-radius: 2rem;
+    outline: none;
+}
+
+.buyBtn:hover {
+    transform: translateY(-10%);
+}
+
+@media (max-width: 720px) {
+    .dotted__line__discount {
+        width: 10rem;
+    }
+    .dotted__line__total {
+        width: 5rem;
+    }
+    .total {
+        flex-direction: column;
+        margin: 1rem;
+    }
+    .buyBtn {
+        height: 5rem;
+        margin: 1rem auto;
+    }
+}
