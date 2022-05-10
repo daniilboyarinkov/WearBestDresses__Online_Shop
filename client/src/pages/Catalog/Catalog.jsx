@@ -19,7 +19,7 @@ export default function Catalog() {
                     }}
                     className={opened ? styles.burger__open : styles.burger}
                     width={48}
-                    src='/svg/burger.svg'
+                    src='/WearBestDresses__Online_Shop/svg/burger.svg'
                     alt='Burger'
                 />
                 <div
@@ -34,7 +34,7 @@ export default function Catalog() {
                             }}
                             className={styles.back}
                             width={24}
-                            src='/svg/arrow_left.svg'
+                            src='/WearBestDresses__Online_Shop/svg/arrow_left.svg'
                             alt='Back'
                         />
                     </div>

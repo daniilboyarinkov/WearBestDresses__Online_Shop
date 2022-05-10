@@ -72,7 +72,7 @@ const Productpage = () => {
                             }}
                             className={styles.favourite}
                             width={64}
-                            src='/svg/like_done.svg'
+                            src='/WearBestDresses__Online_Shop/svg/like_done.svg'
                             alt=''
                         />
                     ) : (
@@ -83,7 +83,7 @@ const Productpage = () => {
                             }}
                             className={styles.favourite}
                             width={64}
-                            src='/svg/like_undone.svg'
+                            src='/WearBestDresses__Online_Shop/svg/like_undone.svg'
                             alt=''
                         />
                     )}
@@ -92,14 +92,14 @@ const Productpage = () => {
                             onClick={prevImage}
                             className={styles.prev}
                             width={32}
-                            src='/svg/next.svg'
+                            src='/WearBestDresses__Online_Shop/svg/next.svg'
                             alt='prev'
                         />
                         <img
                             onClick={nextImage}
                             className={styles.next}
                             width={32}
-                            src='/svg/next.svg'
+                            src='/WearBestDresses__Online_Shop/svg/next.svg'
                             alt='next'
                         />
                     </div>
@@ -123,7 +123,7 @@ const Productpage = () => {
                                     {'Добавлено в корзину'}
                                     <img
                                         className={styles.added__to__cart}
-                                        src='/svg/check.svg'
+                                        src='/WearBestDresses__Online_Shop/svg/check.svg'
                                         alt=''
                                     />
                                 </>

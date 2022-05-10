@@ -30,7 +30,7 @@ const Favourite = () => {
                             <img
                                 className={styles.favourite__img}
                                 width={500}
-                                src='/img/wishlist.png'
+                                src='/WearBestDresses__Online_Shop/img/wishlist.png'
                                 alt=''
                             />
                         </div>
