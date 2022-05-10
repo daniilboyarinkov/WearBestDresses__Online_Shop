@@ -6,13 +6,13 @@
 
 ### Главная:
 
-![Main](for_readme/1.jpg)
+![Main](client/for_readme/1.jpg)
 
 ### Каталог:
 
-![Catalog](for_readme/2-1.jpg)
+![Catalog](client/for_readme/2-1.jpg)
 
-![Catalog](for_readme/2-2.jpg)
+![Catalog](client/for_readme/2-2.jpg)
 
 -   Работает фильтр по цене, по категориям и поиск по названию и бренду.
 
@@ -20,7 +20,7 @@
 
 ### Страница товара:
 
-![Catalog](for_readme/3.jpg)
+![Catalog](client/for_readme/3.jpg)
 
 -   Также реализована возможность добавления в избранное и в корзину из страницы товара.
 
@@ -28,18 +28,18 @@
 
 ### Избранное:
 
-![Favourites](for_readme/4-1.jpg)
+![Favourites](client/for_readme/4-1.jpg)
 
-![Favourites](for_readme/4-2.jpg)
+![Favourites](client/for_readme/4-2.jpg)
 
 -   Реализована возможность удаления из закладок.
 -   Статус сердечка в хедере отслеживается от нахождения пользователя на странице закладок.
 
 ### Корзина:
 
-![Cart](for_readme/5-1.jpg)
+![Cart](client/for_readme/5-1.jpg)
 
-![Cart](for_readme/5-2.jpg)
+![Cart](client/for_readme/5-2.jpg)
 
 -   Реализована возможность удаления из корзины.
 -   Есть возможность использовать бонусы, купоны и подарочные карты.
