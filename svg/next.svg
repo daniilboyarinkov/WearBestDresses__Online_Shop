@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<svg viewBox="0 0 24 24" fill='#3e3e3e'
+<svg viewBox="0 0 24 24" fill='#e3e3e3' stroke='#666'
     xmlns="http://www.w3.org/2000/svg">
     <g id="Next">
         <path d="M9.5,22a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42L17.09,12,8.79,3.71a1,1,0,0,1,1.42-1.42l9,9a1,1,0,0,1,0,1.42l-9,9A1,1,0,0,1,9.5,22Z"/>
