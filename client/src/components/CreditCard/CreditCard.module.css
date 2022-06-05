@@ -1,0 +1,267 @@
+.wrapper {
+    margin: 2rem;
+    user-select: none;
+}
+
+.credit_card {
+    position: relative;
+    width: 325px;
+    height: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -10rem;
+    border-radius: 1rem;
+}
+
+.card__bg,
+.card__back__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    background-color: #222;
+    border: none;
+}
+
+.card__back__bg {
+    transform: scale(-1, 1);
+}
+
+.card_type_imgs {
+    position: relative;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+.card_type_img {
+    max-width: 100%;
+    object-fit: contain;
+    max-height: 100%;
+    object-position: top right;
+}
+
+.card__number {
+    width: max-content;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.card__content {
+    position: absolute;
+    width: 90%;
+    bottom: 5%;
+    left: 5%;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__content_title {
+    text-align: center;
+    opacity: 0.6;
+    font-size: small;
+}
+
+.cvv__title {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+}
+
+.cvv__band {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 86%;
+    padding: 0 2%;
+    height: 35px;
+    padding-bottom: 5px;
+    background-color: #ffffff66;
+    border-radius: 0.3rem;
+}
+
+.card_itemType_back {
+    height: 45px;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.card_front_side,
+.card_back_side {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: all 1s ease-in-out;
+}
+
+.card_front_side {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.card_back_side {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card_front_side_backface {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card_back_side_backface {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.credit_card_form {
+    margin: 0 auto;
+    margin-top: 4.5rem;
+    padding: 3rem;
+    padding-bottom: 1.5rem;
+    padding-top: 6rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    border-radius: 2rem;
+    border: 0.1rem solid #eee;
+    box-shadow: 0 0 1rem #aaa;
+}
+
+.card_form_number,
+.card_form_holder,
+.card_form_expiration,
+.card_form_cvv {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #33333366;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card_form_number__inp,
+.card_form_holder__inp,
+.card_form_cvv__inp {
+    padding: 0.5rem;
+    appearance: textfield;
+    outline: none;
+    border: 0.07rem solid #eee;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.7rem #e1e1e1;
+    color: #333;
+    font-weight: bold;
+}
+
+.card_form_number__inp:focus,
+.card_form_holder__inp:focus,
+.card_form_cvv__inp:focus {
+    border: 0.07rem solid #00bfff;
+}
+
+.card_form_expiration_dates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.card_form_expiration_dates > select {
+    padding: 0.5rem 0;
+    text-align: center;
+    background-color: #fefefe;
+    border: 0.1rem solid #efefef;
+    outline: none;
+    border-radius: 0.7rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.card_form_submit {
+    cursor: pointer;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding: 1rem;
+    background-color: #00bfff44;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #33333366;
+    border: 0.1rem solid #ddd;
+    outline: none;
+    border-radius: 1rem;
+}
+
+.card_form_submit:hover {
+    border: 0.1rem solid #00bfff;
+}
+
+@media screen and (max-width: 1024px) {
+    .credit_card_form {
+        padding: 0;
+        padding-bottom: 1.5rem;
+        padding-top: 6rem;
+    }
+    .wrapper {
+        margin: 0;
+        margin-top: 2rem;
+    }
+    .card_form_number,
+    .card_form_holder,
+    .card_form_expiration,
+    .card_form_cvv {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .credit_card_form {
+        padding: 0;
+        padding-bottom: 1.5rem;
+        padding-top: 6rem;
+        margin: 0;
+        margin-left: 2vw;
+        width: 94vw;
+        margin-top: 4.5rem;
+    }
+    .wrapper {
+        margin: 0;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .credit_card {
+        left: 47%;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .credit_card {
+        left: 50%;
+    }
+}

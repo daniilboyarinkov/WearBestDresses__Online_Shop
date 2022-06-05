@@ -1,0 +1,27 @@
+.deliveryData__form {
+    color: #3e3e3e;
+    width: fit-content;
+    padding: 2rem;
+    padding-top: 1rem;
+    margin: 1rem auto;
+    background-color: #fefefe33;
+    box-shadow: 0 0 1rem #aaaaaa33;
+    letter-spacing: 1px;
+    border-radius: 1rem;
+}
+
+.deliveryData__content {
+    text-align: left;
+}
+
+.deliveryData__form > h1 {
+    font-size: 1.7rem;
+    margin: 0.5rem;
+}
+
+.deliveryData__content {
+    background-color: #fefefe33;
+    box-shadow: 0 0 1rem #aaaaaa33;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+}

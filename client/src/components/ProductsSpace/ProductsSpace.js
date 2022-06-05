@@ -11,11 +11,12 @@ import { Empty } from '../Empty/Empty'
 
 const ProductsSpace = ({ productsPerPage }) => {
     const { category = 'all', page = '1' } = useParams()
-    const [products, setProducts] = useState([])
     const [productsOnPage, setProductsOnPage] = useState([])
     const [filterQuery, setFilterQuery] = useState('')
     const [isFilteredByPriceUp, setIsFilteredByPriceUp] = useState(false)
     const [isFilteredByPriceDown, setIsFilteredByPriceDown] = useState(false)
+    const [catalog] = useState(require('../../catalog/catalog'))
+    const [products, setProducts] = useState(catalog.default[`${category}`])
 
     const filterProducts = (query) => setFilterQuery(query)
     const filterByPriceUp = () => {
@@ -30,34 +31,25 @@ const ProductsSpace = ({ productsPerPage }) => {
     const isAddedToFavourite = (obj) => checkProductInSessionStorage('favouriteObjects', obj)
 
     useEffect(() => {
-        const setNewProducts = async () => {
-            let catalog = require('../../catalog/catalog')
-            let prs = catalog.default[`${category}`]
-            if (isFilteredByPriceUp)
-                prs.sort((a, b) => +a.price.replace(' ', '') - +b.price.replace(' ', ''))
-            else if (isFilteredByPriceDown)
-                prs.sort((a, b) => +b.price.replace(' ', '') - +a.price.replace(' ', ''))
-            setProducts(
-                prs.filter(
-                    (pr) =>
-                        pr.name.toLowerCase().includes(filterQuery.toLowerCase()) ||
-                        pr.brand.toLowerCase().includes(filterQuery.toLowerCase())
-                )
+        let prs = catalog.default[`${category}`]
+        if (isFilteredByPriceUp)
+            prs.sort((a, b) => +a.price.replace(' ', '') - +b.price.replace(' ', ''))
+        else if (isFilteredByPriceDown)
+            prs.sort((a, b) => +b.price.replace(' ', '') - +a.price.replace(' ', ''))
+        setProducts(
+            prs.filter(
+                (pr) =>
+                    pr.name.toLowerCase().includes(filterQuery.toLowerCase()) ||
+                    pr.brand.toLowerCase().includes(filterQuery.toLowerCase())
             )
-            setProductsOnPage(
-                products.slice(+page * productsPerPage - productsPerPage, +page * productsPerPage)
-            )
-        }
-        setNewProducts()
-    }, [
-        products,
-        category,
-        page,
-        filterQuery,
-        isFilteredByPriceUp,
-        isFilteredByPriceDown,
-        productsPerPage,
-    ])
+        )
+    }, [category, page, filterQuery, isFilteredByPriceUp, isFilteredByPriceDown, productsPerPage])
+
+    useEffect(() => {
+        setProductsOnPage(
+            products.slice(+page * productsPerPage - productsPerPage, +page * productsPerPage)
+        )
+    }, [products])
 
     return (
         <>

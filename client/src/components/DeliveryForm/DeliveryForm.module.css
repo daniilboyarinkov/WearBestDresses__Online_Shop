@@ -1,0 +1,97 @@
+.wrapper {
+    margin-top: 1rem;
+    text-align: center;
+    color: #33333366;
+    font-weight: bold;
+}
+
+.delivery__form {
+    margin: 2rem;
+    margin-top: -4.5rem;
+    background-color: #fefefe;
+    padding: 3rem;
+    padding-bottom: 1.5rem;
+    border-radius: 2rem;
+    border: 0.1rem solid #eee;
+    box-shadow: 0 0 1rem #aaa;
+}
+
+.field {
+    width: 70%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem auto;
+}
+
+.field > input {
+    color: #333;
+    font-weight: bold;
+    border: 0.03rem solid #eee;
+    border: 0.07rem solid #eee;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 0.5rem;
+    box-shadow: 0 0 0.7rem #e1e1e1;
+}
+
+.field > input:focus {
+    border: 0.07rem solid #00bfff;
+}
+
+.horizontal {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.horizontal > div {
+    margin: 0;
+}
+
+.card_form_submit {
+    cursor: pointer;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    padding: 1rem;
+    background-color: #00bfff44;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #33333366;
+    border: 0.1rem solid #ddd;
+    outline: none;
+    border-radius: 1rem;
+}
+
+.card_form_submit:hover {
+    border: 0.1rem solid #00bfff;
+}
+
+@media screen and (max-width: 1024px) {
+    .field {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .field {
+        width: 100%;
+    }
+    .wrapper {
+        width: 100vw;
+    }
+    .delivery__form {
+        margin-top: 2rem;
+        margin-left: 4vw;
+    }
+    .horizontal {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

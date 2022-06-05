@@ -1,15 +1,17 @@
+import { useState } from 'react'
 import { CouponCard } from '../../components/CouponCard/CouponCard'
 import { GiftCard } from '../../components/GiftCard/GiftCard'
 
 import styles from './MainPage.module.css'
 
 const MainPage = () => {
+    const [infoOpen, setInfoOpen] = useState(false)
     return (
         <div className={styles.content__container}>
-            <h1>Wear Best Dresses</h1>            
+            <h1>Wear Best Dresses</h1>
             <p>
                 {' — Это интернет магазин, pet проект '}
-                <a href='https://github.com/daniilboyarinkov'> BDW </a>.
+                <a href='https://github.com/daniilboyarinkov'> BDW (click)</a>.
             </p>
 
             <p>
@@ -21,14 +23,13 @@ const MainPage = () => {
                 <div className={styles.coupon__card}>
                     <CouponCard />
                 </div>
-                <p>P.S. Используйте его в коризине</p>
+                <p className={styles.ps}>P.S. Используйте его в корзине</p>
             </div>
 
             <p>
                 Этот проект был сделан при помощи
                 <a href='https://ru.wikipedia.org/wiki/React'> JS библиотеки React.</a>
             </p>
-
             <div className={styles.technologies}>
                 <div className={styles.div_ul}>
                     В ходе разработки использовались следующие технологии:
@@ -65,7 +66,17 @@ const MainPage = () => {
                 </div>
             </div>
 
-            <div className={styles.additional__info}>
+            <div
+                className={styles.show__additional__info}
+                onClick={() => setInfoOpen((prev) => !prev)}>
+                Показать доп информацию
+            </div>
+            <div
+                className={
+                    infoOpen
+                        ? styles.additional__info
+                        : `${styles.additional__info__closed}`
+                }>
                 <p>
                     Время выполнения проекта: <span>1 неделя.</span>
                 </p>
@@ -82,7 +93,7 @@ const MainPage = () => {
             <div className={styles.gift__card}>
                 <h2>Вам подарочная карта за прочтение! </h2>
                 <GiftCard />
-                <p>P.S. Используйте её в коризине</p>
+                <p className={styles.ps}>P.S. Используйте её в корзине</p>
             </div>
         </div>
     )

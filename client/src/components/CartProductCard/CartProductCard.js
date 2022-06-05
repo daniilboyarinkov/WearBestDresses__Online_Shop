@@ -17,7 +17,7 @@ const CartproductCard = ({ product, index, deleteProducts }) => (
             <img
                 className={styles.product__img}
                 width={150}
-                height={200}
+                height={175}
                 src={`${product.img ?? product.images[0]}`}
                 alt='Product'
                 draggable='false'

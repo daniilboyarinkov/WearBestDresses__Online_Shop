@@ -3,12 +3,12 @@
     justify-content: space-around;
     align-items: center;
     user-select: none;
-    box-shadow: 0 0 0.2rem #3e3e3e;
     background-color: #fff;
     border-radius: 1rem;
     width: 15rem;
     height: 3rem;
     margin: 1rem auto;
+    box-shadow: 0 0 0.1rem #3e3e3e33;
 }
 
 .pagination__container:hover {

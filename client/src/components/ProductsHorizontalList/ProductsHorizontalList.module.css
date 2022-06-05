@@ -1,15 +1,40 @@
 .products {
-    margin-left: 3rem;
-    padding: 0.5rem 2rem;
-    min-width: 500px;
+    background-image: url(https://images.unsplash.com/photo-1600172454284-934feca24ccd?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870);
+    background-position: center center;
+    border-radius: 2rem;
+    background-size: cover;
+    padding: 0.5rem 1rem;
+    width: clamp(275px, 80%, 550px);
     overflow-y: scroll;
+    box-shadow: 0 0 1rem #aaa;
+    border: .15rem solid #eee;
+    margin: 1rem auto;
+    margin-left: 3rem;
+    transition: all 0.3s ease;
+    max-height: 23rem;
+}
+
+.products > div:hover {
+    scale: 1.01;
 }
 
 @media (max-width: 720px) {
     .products {
-        width: 100%;
+        width: 86%;
         margin-left: 1rem;
         overflow-x: hidden;
         padding: 0;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .products {
+        width: 96%;
+        margin-left: 0;
+        overflow-x: hidden;
+        padding: 0;
+        padding-left: 0.4rem;
+        padding-top: 0.4rem;
     }
 }

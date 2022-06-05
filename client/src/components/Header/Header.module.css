@@ -21,6 +21,7 @@ header {
 
 .header__item {
     padding: 0 0.5rem;
+    letter-spacing: 2px;
 }
 
 .header__button {

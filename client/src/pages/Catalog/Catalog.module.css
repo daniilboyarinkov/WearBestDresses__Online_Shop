@@ -21,6 +21,7 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
+    text-align: center;
 }
 
 .back {
@@ -38,7 +39,30 @@
 }
 
 .popup__open {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 100%);
+    background: radial-gradient(#fff 3px, transparent 4px),
+        radial-gradient(#fff 3px, transparent 4px), linear-gradient(#eee 4px, transparent 0),
+        linear-gradient(
+            45deg,
+            transparent 74px,
+            transparent 75px,
+            #fefefe 75px,
+            #fefefe 76px,
+            transparent 77px,
+            transparent 109px
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 75px,
+            transparent 76px,
+            #fefefe 76px,
+            #fefefe 77px,
+            transparent 78px,
+            transparent 109px
+        );
+    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background-color: #eee;
+    background: blur(20px);
     font-weight: bold;
     display: block;
     position: relative;
@@ -47,7 +71,8 @@
     padding: 1rem;
     color: #333;
     border-radius: 1rem;
-    background-color: #eee;
+    border: 0.1rem solid #f1f1f1;
+    box-shadow: 0 0 1rem #aaa;
 }
 
 .leftMenu {

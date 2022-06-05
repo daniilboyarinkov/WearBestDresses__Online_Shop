@@ -1,8 +1,10 @@
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
+
+import { setToSessionStorage, checkProductInSessionStorage } from '../../helpers/SessionStorage'
+import { productSizes } from '../../catalog/productSizes'
 
 import styles from './ProductPage.module.css'
-import { setToSessionStorage, checkProductInSessionStorage } from '../../helpers/SessionStorage'
 
 const Productpage = () => {
     const { id } = useParams()
@@ -11,6 +13,8 @@ const Productpage = () => {
     const [moreInfoText, setMoreInfoText] = useState('')
     const [addedToCart, setAddedToCart] = useState(false)
     const [addedToFavourite, setAddedToFavourite] = useState(false)
+
+    const mainContnent = useRef()
 
     const nextImage = () => {
         const prevIndex = product?.images.indexOf(activeImage)
@@ -25,18 +29,21 @@ const Productpage = () => {
     }
 
     useEffect(() => {
-        const doSth = async () => {
-            const catalog = require('../../catalog/catalog')
-            const pr = catalog.default.all.find((p) => +p.id === +id)
+        setTimeout(() => window.scrollTo(0, mainContnent.current.offsetTop - 10), 10)
 
-            setProduct(pr)
-            setActiveImage(pr.images[0])
-            setAddedToCart(checkProductInSessionStorage('cartObjects', pr))
-            setAddedToFavourite(checkProductInSessionStorage('favouriteObjects', pr))
-            setMoreInfoText(pr.description)
-        }
-        doSth()
+        const catalog = require('../../catalog/catalog')
+        const pr = catalog.default.all.find((p) => +p.id === +id)
+
+        setProduct(pr)
+        setActiveImage(pr.images[0])
+        setAddedToCart(checkProductInSessionStorage('cartObjects', pr))
+        setAddedToFavourite(checkProductInSessionStorage('favouriteObjects', pr))
+        setMoreInfoText(pr.description)
     }, [id])
+
+    const [chosenSize, setChosenSize] = useState(0)
+    const [isChooseSizeOpen, setIsChooseSizeOpen] = useState(false)
+    const [isSizeInfoOpen, setIsSizeInfoOpen] = useState(false)
 
     return (
         <div className={styles.product__page}>
@@ -57,36 +64,22 @@ const Productpage = () => {
                         />
                     ))}
                 </div>
-                <div className={styles.active__image__preview__container}>
+                <div className={styles.active__image__preview__container} ref={mainContnent}>
+                    <img className={styles.active__image__preview} src={activeImage} alt='' />
                     <img
-                        className={styles.active__image__preview}
-                        src={activeImage}
-                        width='500px'
+                        onClick={() => {
+                            setAddedToFavourite((prev) => !prev)
+                            setToSessionStorage('favouriteObjects', product)
+                        }}
+                        className={styles.favourite}
+                        width={64}
+                        src={
+                            addedToFavourite
+                                ? '/WearBestDresses__Online_Shop/svg/like_done.svg'
+                                : '/WearBestDresses__Online_Shop/svg/like_undone.svg'
+                        }
                         alt=''
                     />
-                    {addedToFavourite ? (
-                        <img
-                            onClick={() => {
-                                setAddedToFavourite((prev) => !prev)
-                                setToSessionStorage('favouriteObjects', product)
-                            }}
-                            className={styles.favourite}
-                            width={64}
-                            src='/WearBestDresses__Online_Shop/svg/like_done.svg'
-                            alt=''
-                        />
-                    ) : (
-                        <img
-                            onClick={() => {
-                                setAddedToFavourite((prev) => !prev)
-                                setToSessionStorage('favouriteObjects', product)
-                            }}
-                            className={styles.favourite}
-                            width={64}
-                            src='/WearBestDresses__Online_Shop/svg/like_undone.svg'
-                            alt=''
-                        />
-                    )}
                     <div className={styles.image__navigation}>
                         <img
                             onClick={prevImage}
@@ -108,6 +101,106 @@ const Productpage = () => {
                     <div className={styles.product__name}>{product.name}</div>
                     <div className={styles.product__articul}>{product['venor code']}</div>
                     <div className={styles.product__price}>{product.price} ₽</div>
+
+                    <hr />
+
+                    <div className={styles.choose__size}>
+                        <div
+                            className={styles.choose__size__main}
+                            onClick={() => setIsChooseSizeOpen((prev) => !prev)}>
+                            Выберите размер
+                        </div>
+                        <div
+                            className={
+                                isChooseSizeOpen ? styles.choose__size__popup : styles.closed
+                            }>
+                            {productSizes.map((size) => (
+                                <div
+                                    className={styles.choose__size__popup__item}
+                                    key={size.id}
+                                    onClick={() => setChosenSize(size.id)}>
+                                    {size.int}
+                                    {size.id === chosenSize && (
+                                        <img
+                                            className={styles.choose__size__popup__item__check}
+                                            width={18}
+                                            height={18}
+                                            src='/WearBestDresses__Online_Shop/svg/check.svg'
+                                            alt=''
+                                        />
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div
+                        className={styles.open__size__info}
+                        onClick={() => setIsSizeInfoOpen(true)}>
+                        Как выбрать размер?
+                    </div>
+                    <div className={isSizeInfoOpen ? styles.size__info : styles.closed}>
+                        <div className={styles.dark__screen} />
+                        <div className={styles.size__info__video}>
+                            <iframe
+                                src='https://video.lmcdn.ru/videos/48322_12Ml5gMNq5zHMl'
+                                allowFullScreen={true}
+                                width={376}
+                                height={212}
+                                frameBorder={0}
+                            />
+                            <div className={styles.size__info__description}>
+                                <h2>Как определить размер?</h2>
+                                <div>
+                                    <p>
+                                        Сантиметровая лента должна плотно прилегать к телу, но не
+                                        перетягивать его. Измерьте обхват груди по наиболее
+                                        выступающим точкам, пропустив ленту под подмышечными
+                                        впадинами. Обхват талии измеряется по самой узкой части
+                                        тела, проходя через самую выступающую точку живота. Измерьте
+                                        обхват бедер по наиболее выступающим точкам ягодиц.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={styles.size__table}>
+                            <img
+                                onClick={() => setIsSizeInfoOpen(false)}
+                                className={styles.cross}
+                                width={48}
+                                src='/WearBestDresses__Online_Shop/svg/cross.svg'
+                                alt='X'
+                            />
+                            <h2>Женская одежда</h2>
+                            <div className={styles.row}>
+                                <div>RUS</div>
+                                <div>INT</div>
+                                <div>
+                                    Обхват груди
+                                    <div className={styles.styles__units}>см</div>
+                                </div>
+                                <div>
+                                    Обхват талии
+                                    <div className={styles.styles__units}>см</div>
+                                </div>
+                                <div>
+                                    Обхват бедер
+                                    <div className={styles.styles__units}>см</div>
+                                </div>
+                            </div>
+                            {productSizes.map((size) => (
+                                <div className={styles.row} key={size.id}>
+                                    <div>{size.rus}</div>
+                                    <div>
+                                        <b>{size.int}</b>
+                                    </div>
+                                    <div>{size.chest}</div>
+                                    <div>{size.waist}</div>
+                                    <div>{size.hips}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <hr />
                     <div
                         onClick={() => setToSessionStorage('cartObjects', product)}
                         className={styles.add__to__cart}>
@@ -141,7 +234,7 @@ const Productpage = () => {
                         <div
                             onClick={() =>
                                 setMoreInfoText(
-                                    `Доставим что угодно, куда угодно в течение меясца, вы только покупайте. Пожалуйста.`
+                                    `Доставка производится по Москве, Московской области, Тюменской области и Красноярском крае. Доставка производится "до двери" в удобные для заказчика день и время. Доставка занимает от 7 до 20 дней со дня оформления заказа. Оплата производится по карте онлайн.`
                                 )
                             }
                             className={styles.info__title}>

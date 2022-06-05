@@ -37,45 +37,34 @@ export default function Header() {
                         Каталог
                     </Link>
                 </div>
-                {pathname === '/WearBestDresses__Online_Shop/favourite' ? (
-                    <div className={`${styles.header__item} ${styles.header__button}`}>
-                        <Link to={`/WearBestDresses__Online_Shop/favourite`}>
-                            <img width={42} src='/WearBestDresses__Online_Shop/svg/like_done_gray.svg' alt='' />
-                        </Link>
-                    </div>
-                ) : (
-                    <div className={`${styles.header__item} ${styles.header__button}`}>
-                        <Link to={`/WearBestDresses__Online_Shop/favourite`}>
-                            <img width={42} src='/WearBestDresses__Online_Shop/svg/like_grey.svg' alt='' />
-                        </Link>
-                    </div>
-                )}
-
-                {pathname === '/cart' ? (
-                    <div className={`${styles.header__item} ${styles.header__button}`}>
-                        <Link to={`/WearBestDresses__Online_Shop/cart`}>
-                            <img
-                                className='cart'
-                                width='42px'
-                                height='42px'
-                                src='/WearBestDresses__Online_Shop/svg/cart_white.svg'
-                                alt=''
-                            />
-                        </Link>
-                    </div>
-                ) : (
-                    <div className={`${styles.header__item} ${styles.header__button}`}>
-                        <Link to={`/WearBestDresses__Online_Shop/cart`}>
-                            <img
-                                className='cart'
-                                width='42px'
-                                height='42px'
-                                src='/WearBestDresses__Online_Shop/svg/cart.svg'
-                                alt=''
-                            />
-                        </Link>
-                    </div>
-                )}
+                <div className={`${styles.header__item} ${styles.header__button}`}>
+                    <Link to={`/WearBestDresses__Online_Shop/favourite`}>
+                        <img
+                            width={42}
+                            src={
+                                pathname === '/WearBestDresses__Online_Shop/favourite'
+                                    ? '/WearBestDresses__Online_Shop/svg/like_done_gray.svg'
+                                    : '/WearBestDresses__Online_Shop/svg/like_grey.svg'
+                            }
+                            alt=''
+                        />
+                    </Link>
+                </div>
+                <div className={`${styles.header__item} ${styles.header__button}`}>
+                    <Link to={`/WearBestDresses__Online_Shop/cart`}>
+                        <img
+                            className='cart'
+                            width='42px'
+                            height='42px'
+                            src={
+                                pathname === '/WearBestDresses__Online_Shop/cart'
+                                    ? '/WearBestDresses__Online_Shop/svg/cart_white.svg'
+                                    : '/WearBestDresses__Online_Shop/svg/cart.svg'
+                            }
+                            alt=''
+                        />
+                    </Link>
+                </div>
             </div>
         </header>
     )

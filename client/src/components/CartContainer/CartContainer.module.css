@@ -2,10 +2,10 @@
     overflow: scroll;
     display: grid;
     grid-template-columns: 600px 1fr;
-    grid-template-rows: 65vh;
+    grid-template-rows: 60vh;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1024px) {
     .cart__container {
         display: grid;
         grid-template-columns: 1fr;

@@ -4,15 +4,27 @@
 
 .container {
     display: grid;
-    grid-template-columns: 150px 50% 30%;
+    grid-template-columns: 180px 40% 1fr;
     margin-top: 2rem;
 }
 
 .images__preview {
     margin-left: 1rem;
-    padding-right: 1rem;
-    height: 90vh;
+    height: 92vh;
     overflow-y: scroll;
+    border-radius: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+}
+
+.images__preview img:first-child {
+    margin-top: 1.2rem;
+}
+
+.images__preview img:last-child {
+    margin-bottom: 1.2rem;
 }
 
 .img__preview {
@@ -21,7 +33,7 @@
 }
 
 .img__preview__as__active {
-    border: .3rem solid #3e3e3e;
+    border: 0.2rem solid #333;
 }
 
 .image__navigation {
@@ -37,28 +49,54 @@
     transform: rotate(180deg);
 }
 
+.prev,
+.next {
+    transition: scale 0.2s ease-in-out;
+    cursor: pointer;
+}
+
 .prev:hover,
 .next:hover {
     scale: 1.2;
-    cursor: pointer;
+}
+
+.prev:active,
+.next:active {
+    scale: 1.5;
 }
 
 .img__preview:hover {
     opacity: 0.8;
 }
 
+.active__image__preview__container {
+    position: relative;
+    height: 98%;
+}
+
 .active__image__preview {
     border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .product__info {
+    padding: 0 4rem;
     color: #3e3e3e;
+}
+
+.product__info > hr {
+    margin-top: 1rem;
+    width: 90%;
+    border: 1px solid #eeeeee66;
 }
 
 .product__name {
     font-weight: bold;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(241, 241, 241, 1) 100%);
-    border: 0.01rem solid #eee;
+    background-color: #eeeeee66;
+    border: 0.1rem solid #eee;
+    box-shadow: 0 0 0.1rem #eee;
     border-radius: 1rem;
     padding: 1.2rem;
 }
@@ -127,21 +165,129 @@
     text-align: left;
 }
 
-.active__image__preview__container {
-    position: relative;
-}
-
 .favourite {
     cursor: pointer;
     position: absolute;
-    left: 12%;
-    top: 2%;
+    left: 4%;
+    top: 4%;
     opacity: 0.8;
     transition: scale 0.2s ease-in-out;
 }
 
 .favourite:hover {
     scale: 1.1;
+}
+
+.choose__size {
+    background-color: #eeeeee66;
+    font-weight: bold;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    border: 0.1rem solid #eee;
+}
+
+.choose__size__main {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.choose__size__popup__item {
+    padding: 0.4rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.choose__size__popup__item:hover {
+    background-color: #eee;
+}
+
+.closed {
+    display: none;
+}
+
+.choose__size__popup__item__check {
+    position: absolute;
+    top: 25%;
+    right: 10%;
+}
+
+.open__size__info {
+    padding-bottom: 1rem;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: large;
+}
+
+.size__info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+}
+
+.dark__screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000ee;
+}
+
+.size__info__video {
+    z-index: 10001;
+    max-width: 100vw;
+}
+
+.size__info__description {
+    text-align: start;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+}
+
+.size__info__description > h2 {
+    text-align: center;
+}
+
+.size__table {
+    z-index: 10001;
+    height: 100%;
+    background-color: #fff;
+    color: #222;
+    overflow-y: scroll;
+}
+
+.cross {
+    cursor: pointer;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    transition: scale 0.2s ease;
+}
+
+.cross:hover {
+    scale: 1.2;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 1rem 0;
+    border-top: 0.02rem solid #aaa;
+    border-bottom: 0.02rem solid #aaa;
+}
+
+.styles__units {
+    font-size: small;
+    opacity: 0.4;
+    margin-top: .1rem;
 }
 
 @media (max-width: 1100px) {
@@ -154,6 +300,9 @@
     .product__info {
         margin: 0 2rem;
     }
+    .active__image__preview__container {
+        margin-left: 1rem;
+    }
 }
 
 @media (max-width: 720px) {
@@ -164,5 +313,14 @@
         max-width: 80%;
         margin: 2rem auto;
         margin-bottom: 4rem;
+    }
+    .active__image__preview__container {
+        margin: 1rem;
+    }
+    .size__info {
+        grid-template-columns: 1fr;
+    }
+    .size__info__description {
+        display: none;
     }
 }

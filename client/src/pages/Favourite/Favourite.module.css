@@ -21,7 +21,7 @@
     object-fit: cover;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1120px) {
     .container {
         max-width: 100%;
         margin: 0;

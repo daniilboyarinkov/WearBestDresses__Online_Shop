@@ -1,14 +1,20 @@
-import { useEffect, useState } from 'react'
 import { getFromSessionStorage, setToSessionStorage } from '../../helpers/SessionStorage'
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
-import { CartContainer } from '../../components/CartContainer/CartContainer'
 import CartTotal from '../../components/CartTotal/CartTotal'
+import { ProductsHorizontalList } from '../../components/ProductsHorizontalList/ProductsHorizontalList'
+import { CartContainer } from '../../components/CartContainer/CartContainer'
 import { Empty } from '../../components/Empty/Empty'
+import { regularSetToSessionStorage } from '../../helpers/SessionStorage'
+
+import styles from './Cart.module.css'
 
 const Cart = () => {
     const [products, setProducts] = useState(getFromSessionStorage('cartObjects') ?? [])
     const [discount, setDiscount] = useState(0)
     const [totalPrice, setTotalPrice] = useState(0)
+    const [confirm, setConfirm] = useState(false)
 
     const [coupons, setCoupons] = useState([
         {
@@ -58,17 +64,28 @@ const Cart = () => {
     }
 
     useEffect(() => {
-        setTotalPrice(
-            (
-                products.reduce((prev, next) => prev + +next.price.replace(' ', ''), 0) - discount
-            ).toLocaleString('ru-RU')
+        const subtotalPrice = products.reduce(
+            (prev, next) => prev + +next.price.replace(' ', ''),
+            0
         )
+        const discountPrice = discount
+        const totalPrice = subtotalPrice - discountPrice
+
+        setTotalPrice(totalPrice.toLocaleString('ru-RU'))
+
+        regularSetToSessionStorage('cartTotal', {
+            subtotal: subtotalPrice,
+            total: totalPrice,
+            discount: discountPrice,
+        })
     }, [products, discount])
+
+    const confirmPurchase = () => setConfirm(true)
 
     return (
         <>
             {products.length > 0 ? (
-                <>
+                <div className={styles.container}>
                     <h1 style={{ color: '#3e3e3e', textAlign: 'center' }}>Корзина</h1>
                     <CartContainer
                         products={products}
@@ -77,8 +94,59 @@ const Cart = () => {
                         deleteProducts={deleteFromCart}
                     />
 
-                    <CartTotal products={products} discount={discount} totalPrice={totalPrice} />
-                </>
+                    <CartTotal
+                        discount={discount}
+                        totalPrice={totalPrice}
+                        confirmPurchase={confirmPurchase}
+                    />
+                    {confirm && (
+                        <div className={styles.confirm}>
+                            <div
+                                className={styles.darker__screen}
+                                onClick={() => setConfirm(false)}></div>
+                            <form className={styles.confirm__form}>
+                                <img
+                                    className={styles.close__popup}
+                                    width={48}
+                                    onClick={() => setConfirm(false)}
+                                    src='/WearBestDresses__Online_Shop/svg/cross.svg'
+                                    alt='X'
+                                />
+                                <h2>Подтверждение заказа</h2>
+                                Ваш заказ:
+                                <div className={styles.order}>
+                                    <ProductsHorizontalList
+                                        products={products}
+                                        handleSetProducts={handleSetProducts}
+                                        deleteProducts={deleteFromCart}
+                                    />
+                                </div>
+                                {discount > 0 && (
+                                    <div className={styles.total}>
+                                        Скидка: <div className={styles.dots} />{' '}
+                                        <em> — {discount}</em>
+                                    </div>
+                                )}
+                                <div className={styles.total}>
+                                    Всего: <div className={styles.dots} /> <b>{totalPrice}</b>
+                                </div>
+                                <div className={styles.btn__container}>
+                                    <button
+                                        className={`${styles.confirm__btn} ${styles.confirm__no}`}
+                                        onClick={() => setConfirm(false)}>
+                                        Нет, вернуться в корзину
+                                    </button>
+                                    <Link to={`/WearBestDresses__Online_Shop/payment`}>
+                                        <button
+                                            className={`${styles.confirm__btn} ${styles.confirm__yes}`}>
+                                            Да, оплатить заказ
+                                        </button>
+                                    </Link>
+                                </div>
+                            </form>
+                        </div>
+                    )}
+                </div>
             ) : (
                 <Empty
                     title={'Корзина пуста...'}

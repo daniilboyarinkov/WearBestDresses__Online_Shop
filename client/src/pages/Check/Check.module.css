@@ -1,0 +1,26 @@
+.wrapper {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    padding: 1rem;
+    margin: 1rem auto;
+    width: fit-content;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    color: #3e3e3e;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}

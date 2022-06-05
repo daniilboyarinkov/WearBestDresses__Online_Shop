@@ -24,41 +24,28 @@ export default function ProductCard(props) {
 
     return (
         <div className={styles.product__card}>
-            {addedToFavourite ? (
-                <img
-                    onClick={changeAddedToFavourite}
-                    className={styles.favourite}
-                    width={32}
-                    src='/WearBestDresses__Online_Shop/svg/like_done.svg'
-                    alt=''
-                />
-            ) : (
-                <img
-                    onClick={changeAddedToFavourite}
-                    className={styles.favourite}
-                    width={32}
-                    src='/WearBestDresses__Online_Shop/svg/like_undone.svg'
-                    alt=''
-                />
-            )}
-
-            {addedToCart ? (
-                <img
-                    onClick={changeAddedToCart}
-                    className={styles.add__tocart}
-                    width={32}
-                    src='/WearBestDresses__Online_Shop/svg/check.svg'
-                    alt=''
-                />
-            ) : (
-                <img
-                    onClick={changeAddedToCart}
-                    className={styles.add__tocart}
-                    width={32}
-                    src='/WearBestDresses__Online_Shop/svg/add.svg'
-                    alt=''
-                />
-            )}
+            <img
+                onClick={changeAddedToFavourite}
+                className={styles.favourite}
+                width={32}
+                src={
+                    addedToFavourite
+                        ? '/WearBestDresses__Online_Shop/svg/like_done.svg'
+                        : '/WearBestDresses__Online_Shop/svg/like_undone.svg'
+                }
+                alt=''
+            />
+            <img
+                onClick={changeAddedToCart}
+                className={styles.add__tocart}
+                width={32}
+                src={
+                    addedToCart
+                        ? '/WearBestDresses__Online_Shop/svg/check.svg'
+                        : '/WearBestDresses__Online_Shop/svg/add.svg'
+                }
+                alt=''
+            />
 
             <Link to={`/WearBestDresses__Online_Shop/catalog/product/${id}`}>
                 <img className={styles.product__img} draggable='false' src={`${img}`} alt='' />

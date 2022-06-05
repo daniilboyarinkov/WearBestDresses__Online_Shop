@@ -1,19 +1,15 @@
 .total {
     color: #3e3e3e;
+    margin: 0;
     margin-left: 3rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.discount__block {
-    text-align: center;
-    display: inline-grid;
-    grid-template-columns: auto 1fr auto;
-    font-weight: 100;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 .discount__block > span {
     text-align: right;
+    margin-bottom: 0;
 }
 
 .dotted__line__total {
@@ -26,27 +22,37 @@
     width: 20rem;
 }
 
+.discount__block {
+    width: 60%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 100;
+}
+
 .totalPrice__block {
-    margin-top: 0;
-    display: inline-grid;
-    grid-template-columns: auto 1fr auto;
+    width: 60%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .buyBtn {
-    color: #666;
-    border: 0.01rem solid #e3e3e3;
-    box-shadow: 0 0 1rem #3e3e3e;
+    color: #888;
+    border: 0.5rem solid #eee;
+    box-shadow: 0 0 1rem #aaa;
     font-weight: bold;
     font-size: 1.2rem;
-    background: rgba(231, 255, 230, 0.8);
+    background-color: #cbe4d666;
     cursor: pointer;
     width: 20rem;
     margin-right: 2rem;
     margin-bottom: 2rem;
     height: 5rem;
-    border: none;
+    border: 0.2rem solid #eee;
     border-radius: 2rem;
     outline: none;
+    transition: all 0.2s ease;
 }
 
 .buyBtn:hover {
@@ -61,11 +67,18 @@
         width: 5rem;
     }
     .total {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         margin: 1rem;
     }
     .buyBtn {
         height: 5rem;
         margin: 1rem auto;
+    }
+    .discount__block {
+        width: 90%;
+    }
+    
+    .totalPrice__block {
+        width: 90%;
     }
 }

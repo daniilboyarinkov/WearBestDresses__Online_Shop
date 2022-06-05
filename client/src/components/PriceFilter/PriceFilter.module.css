@@ -5,11 +5,15 @@
     width: fit-content;
     margin: 1rem 0;
     margin-left: 2rem;
-    border: 0.01rem solid #e3e3e3;
+    box-shadow: 0 0 0.1rem #aaaaaa33;
     border-radius: 1rem;
     padding: 0.2rem;
     justify-content: center;
     align-items: center;
+}
+
+.container:hover {
+    box-shadow: 0 0 0.1rem #aaa;
 }
 
 .arrow {

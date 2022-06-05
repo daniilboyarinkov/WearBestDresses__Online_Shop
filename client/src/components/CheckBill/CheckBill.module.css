@@ -1,0 +1,92 @@
+.checkBill {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 1rem 3rem;
+    text-align: start;
+    user-select: none;
+    position: relative;
+    color: #3e3e3e;
+    width: fit-content;
+    box-shadow: 0 0 1rem #aaaaaa33;
+
+    background: linear-gradient(-45deg, transparent 6px, #fdfdfd 7px),
+        linear-gradient(45deg, transparent 6px, #fdfdfd 7px),
+        linear-gradient(-45deg, #fdfdfd calc(100% - 7px), transparent calc(100% - 8px)),
+        linear-gradient(45deg, #fdfdfd calc(100% - 7px), transparent calc(100% - 8px));
+    background-color: #eeeeeeee;
+    background-size: 10px 50%;
+    background-position: 0 100%, 0 100%, 0 0, 0 0;
+    background-repeat: repeat-x;
+    letter-spacing: 1px;
+}
+
+.checkBill > hr {
+    border: none;
+    border-bottom: 0.12rem dashed #bbb;
+    margin: 1rem 0;
+}
+
+.checkBill > h1,
+.checkBill > h2 {
+    text-align: center;
+    margin: 0.5rem;
+    font-size: 1.7rem;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+}
+
+.product,
+.subtotal,
+.total,
+.discount,
+.percents {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    margin: 0.2rem 0;
+}
+
+.product > span:last-child {
+    margin-left: 1rem;
+}
+
+.productName {
+    max-width: 250px;
+}
+
+.subtotal,
+.discount,
+.percents {
+    color: #33333399;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.thanks,
+.download {
+    text-align: center;
+}
+
+.download {
+    cursor: pointer;
+    color: #33333333;
+    margin-top: 0.2rem;
+}
+
+.download:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 400px) {
+    .checkBill {
+        padding: 0.4rem;
+        padding-bottom: 1rem;
+    }
+}

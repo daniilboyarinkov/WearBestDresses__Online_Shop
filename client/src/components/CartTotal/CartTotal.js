@@ -1,28 +1,22 @@
 import styles from './CartTotal.module.css'
 
-export default function CartTotal({ discount, totalPrice, products }) {
+export default function CartTotal({ discount, totalPrice, confirmPurchase }) {
     return (
         <div className={styles.total}>
             <div className={styles.total__section}>
                 <div className={styles.discount__block}>
-                    Скидка: <div className={styles.dotted__line__discount} />
-                    <span> — {discount} ₽</span>
+                    Скидка:
+                    <span>
+                        <em> — {discount} ₽ </em>
+                    </span>
                 </div>
                 <br />
                 <h1 className={styles.totalPrice__block}>
-                    Всего: <div className={styles.dotted__line__total} />
+                    Всего:
                     <span>{totalPrice} ₽</span>
                 </h1>
             </div>
-            <button
-                onClick={() =>
-                    alert(
-                        `Поздравляю вы прошли квест! \n Вы купили: \n ${products.map(
-                            (pr) => pr.name + ' \n '
-                        )} \n За ${totalPrice} рублей`.replace(/,/gm, '')
-                    )
-                }
-                className={styles.buyBtn}>
+            <button onClick={confirmPurchase} className={styles.buyBtn}>
                 Оплатить покупку
             </button>
         </div>

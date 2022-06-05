@@ -5,9 +5,10 @@
     padding-left: 0;
     padding: 1rem;
     color: #3e3e3e;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(221, 221, 221, 1) 100%);
+    background-color: #aaaaaa00;
+    backdrop-filter: blur(20px);
     border-radius: 2rem;
-    box-shadow: -0.2rem 0.2rem 0.1rem 0.1rem #e3e3e3;
+    box-shadow: -0.2rem 0.35rem 0.1rem 0.1rem #aaa;
 }
 
 .dress__type {
